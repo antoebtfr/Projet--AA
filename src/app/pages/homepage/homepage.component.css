@@ -1,0 +1,31 @@
+app-loading.isLoaded {
+  animation-fill-mode: forwards;
+  animation-name: fadeOut;
+  animation-delay: 10s;
+  animation-duration: 2s;
+}
+
+app-selection-menu.isLoaded {
+  animation-name: goToTop;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+app-selection-menu{
+    opacity: 0;
+    position: fixed;
+}
+
+@keyframes fadeOut{
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes goToTop{
+    100% {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+}

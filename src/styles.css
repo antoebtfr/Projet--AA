@@ -45,3 +45,11 @@ table {
 body{
 	color : white;
 }
+
+/* keyframes */
+
+@keyframes fadeOut {
+	100% {
+	  opacity: 0;
+	}
+  }
