@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./connection-tips.component.css']
 })
 export class ConnectionTipsComponent implements OnInit {
+  constructor() { }
 
   public tips: string;
   public tipsArray = ['Je suis le tips 1', 'Je suis le tips 2', 'Je suis le tips 3'];
-  constructor() { }
 
   ngOnInit() {
     this.showRandomTips(this.tipsArray.length);
   }
 
-  private showRandomTips(max: number) {
+  private showRandomTips(max: number) { // Choix aélatoire du tips
     const numero = Math.floor(Math.random() * Math.floor(max));
     this.tips = this.tipsArray[numero];
   }

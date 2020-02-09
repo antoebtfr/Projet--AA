@@ -1,5 +1,6 @@
 <section id='body'>
-    <app-connection-tips *ngIf="false"></app-connection-tips>
-    <h1> Je suis le nom salut </h1>
-    <img src="https://cdn.pixabay.com/photo/2017/09/13/22/50/female-2747374_960_720.png">
+    <app-connection-tips [ngClass]="loadingEnd ? 'afterLoading' : '' "></app-connection-tips>
+    <app-application-name [ngClass]="loadingEnd ? 'afterLoading' : '' "></app-application-name>
 </section>
+
+<!-- needfix : faire en sorte de faire disparaite les divs une fois inutiles -->
