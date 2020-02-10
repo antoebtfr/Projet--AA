@@ -6,7 +6,7 @@
   justify-content: center;
   color: white;
   font-size: 5em;
-  background-color: red;
+  background-color: teal;
 }
 
 #body h1 {
@@ -27,7 +27,6 @@ app-connection-tips.afterLoading {
 
 app-connection-tips {
   transition: 2s;
-  background-color: red;
   height: 100vh;
   width: 100vw;
 }

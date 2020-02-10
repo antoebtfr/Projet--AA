@@ -3,9 +3,9 @@
     <div id="modes-list">
         <div *ngFor="let mode of modesArray" class="hexagone">
             <div class="hexagonemain">
-                <div class="hexagonemainbefore" style.background-image=url({{mode.img}})>      
+                <div class="hexagonemainbefore" style.background-image=url({{mode.img}})>
+                    <p> {{mode.name}} </p>
                 </div>
-                <p>{{mode.name}} Salut je suis un test </p>
             </div>
         </div>
     </div>
