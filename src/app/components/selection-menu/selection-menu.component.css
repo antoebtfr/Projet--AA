@@ -3,21 +3,78 @@
   width: 100vw;
   background-color: teal;
   display: flex;
+  flex-flow: column wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  color: white;
+}
+
+h2{
+  font-size: 2em;
 }
 
 #modes-list {
   background-color: red;
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
-.mode {
-  width: 30%;
-  height: 80%;
-  background-color: blue;
+.hexagone {
+  position: relative;
+  width: 25vw;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+  filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+}
+.hexagone:after {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  content: "";
+  display: block;
+  margin-top: 28.86751%;
+  padding-bottom: 86.602%;
+}
+.hexagone .hexagonemain{
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 115.47005%;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+  -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+  transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+  z-index: 1;
+}
+.hexagone .hexagonemainbefore{
+  display: block;
+  position: absolute;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+  -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+  transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+  backdrop-filter: blur(8px);
+}
+
+.hexagone .hexagonecontent{
+  overflow-y: auto;
+  width: 100%;
+  display: block;
+  position: absolute;
+  visibility: visible;
+  bottom: 25%;
+  top: 25%;
+  left: 0;
+  z-index: 3;
 }

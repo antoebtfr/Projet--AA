@@ -1,7 +1,12 @@
 <section id='body'>
+    <h2> Nom de l'application </h2>
     <div id="modes-list">
-        <div class="mode"> Mode 1 </div>
-        <div class="mode"> Mode 2 </div>
-        <div class="mode"> Mode 3 </div>
+        <div *ngFor="let mode of modesArray" class="hexagone">
+            <div class="hexagonemain">
+                <div class="hexagonemainbefore" style.background-image=url({{mode.img}})>      
+                </div>
+                <p>{{mode.name}} Salut je suis un test </p>
+            </div>
+        </div>
     </div>
 </section>
